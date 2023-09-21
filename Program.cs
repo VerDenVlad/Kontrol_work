@@ -1,8 +1,8 @@
-﻿Commands();
+﻿ListOfCommands();
 string[] array = new string[] {};
 
-string fromUser = ReadInput("Введите команду: ");
-switch (fromUser)
+string inputNum = ReadInput("Введите номер команды: ");
+switch (inputNum)
 {
     case "1":
         array = new string[] { "Hello", "2", "world", ":-)" };
@@ -14,18 +14,18 @@ switch (fromUser)
         array = new string[] { "Russia", "Denmark", "Kazan" };
         break;
     default:
-        Console.WriteLine($"{fromUser} - Такой команды нет");
+        Console.WriteLine($"{inputNum} - Команда указана неверно!");
         break;
 }
 
 
-int lenNewArray = 0;
+int lengNewArray = 0;
 for (int i = 0; i <= array.Length - 1; i++)
 {
-    if (array[i].Length <= 3) lenNewArray++;
+    if (array[i].Length <= 3) lengNewArray++;
 }
 
-string[] newArray = new string[lenNewArray];
+string[] newArray = new string[lengNewArray];
 int idx = 0;
 
 for (int i = 0; i <= array.Length - 1; i++)
@@ -41,8 +41,7 @@ PrintArray(array);
 Console.Write("→ ");
 PrintArray(newArray);
 
-// Функция: Вывод команд для работы с программой
-void Commands()
+void ListOfCommands()    //Вывод команд для выбора
 {
     Console.WriteLine();
     Console.WriteLine("СПИСОК КОМАНД:");
@@ -52,15 +51,13 @@ void Commands()
     Console.WriteLine();
 }
 
-// Функция ввода
-string ReadInput(string msg)
+string ReadInput(string msg)  // Функция ввода
 {
     Console.Write(msg);
     return Console.ReadLine();
 }
 
-//  Функция вывода массива в терминал
-void PrintArray(string[] array)
+void PrintArray(string[] array)  // Функция вывода массива
 {
     Console.Write("[ ");
     for (int i = 0; i < array.Length; i++)
