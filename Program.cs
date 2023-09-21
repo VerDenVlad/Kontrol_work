@@ -26,14 +26,14 @@ for (int i = 0; i <= array.Length - 1; i++)
 }
 
 string[] newArray = new string[lengNewArray];
-int idx = 0;
+int a = 0;
 
 for (int i = 0; i <= array.Length - 1; i++)
 {
     if (array[i].Length <= 3)
     {
-        newArray[idx] = array[i];
-        idx++;
+        newArray[a] = array[i];
+        a++;
     }
 }
 
