@@ -32,7 +32,7 @@
 
 **`4 Пункт`**
 
-* Написана программа расположенная в дерктиве `Kontrol_work/Program.cs` в ветке `master`
+* Написана программа расположенная в дерктиве `Kontrol_work/Program.cs` в ветке `main`
 
 ```
 ListOfCommands();
